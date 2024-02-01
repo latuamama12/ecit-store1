@@ -54,23 +54,37 @@
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required>
 
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required>
+
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" required>
 
     <button type="button" onclick="validateForm()">Login</button>
+    <h5>non sei registrato?</h5>
+
+    <div class="form-group row mb-0">
+       <div class="col-md-6 offset-md-4">
+          <button type="submit" class="btn btn-primary" >
+             <a  href="/register" >Registrati</a>
+          </button>
+        </div>
+    </div>
+
   </form>
 
   <script>
     function validateForm() {
       var username = document.getElementById('username').value;
+      var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
-
+      
       // Esempio di validazione lato client
       if (username === '' || password === '') {
         alert('Inserisci username e password');
       } 
        // Esempio di validazione lato client
-    if (username === 'admin' && password === 'admin') {
+    if (username === 'admin' && password === 'admin' && email === 'admin@ecit.it') {
       // Reindirizza l'utente alla pagina admin.index
       window.location.href = "{{ route('admin.index') }}";
     } else {

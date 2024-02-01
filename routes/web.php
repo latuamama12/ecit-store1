@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\UtenteController;
 use App\Models\Book;
 use Illuminate\Support\Facades\Route;
 
@@ -32,3 +34,8 @@ Route::post('/admin/store', [BookController::class, 'store'])->name('admin.store
 Route::get('/admin/{book}/edit', [BookController::class, 'edit'])->name('admin.edit');
 Route::put('/admin/{book}/update', [BookController::class, 'update'])->name('admin.update');
 Route::delete('/admin/{book}/destroy', [BookController::class, 'destroy'])->name('admin.destroy');
+
+
+
+Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register.form');
+Route::post('/register', [AuthController::class, 'register'])->name('register');

@@ -23,7 +23,7 @@ class AuthController extends Controller
 
         auth()->login($user);
 
-        return redirect('/dashboard'); // Redirect to the dashboard or login page
+        return redirect('/'); // Redirect to the dashboard or login page
     }
 
     protected function validator(array $data)

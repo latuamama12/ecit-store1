@@ -81,15 +81,15 @@
 
 
 
-        <h2>{{ $book->titolo }}</h2>
+    <h2>{{ $book->titolo }}</h2>
 
 
-        <h4>Descrizione: </h4>
-      <h6>  {{ $book->descrizione }}</h6>
-      <h4>Prezzo: </h4>
-      <h6>  {{ $book->prezzo }} €</h6>
-      <h4>Categoria: </h4>
-      <h6>  {{ $book->categoria}} </h6>
+    <h4>Descrizione: </h4>
+    <h6>  {{ $book->descrizione }}</h6>
+    <h4>Prezzo: </h4>
+    <h6>  {{ $book->prezzo }} €</h6>
+    <h4>Categoria: </h4>
+    <h6>  {{ $book->categoria}} </h6>
         
 
    
